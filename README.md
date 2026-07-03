@@ -12,7 +12,7 @@ We first developed a shared baseline model together and then independently exper
 
 Develop a CNN capable of accurately classifying images into the 10 CIFAR-10 categories while minimizing overfitting through systematic model experimentation.
 
-**Dataset:** CIFAR-10 (60,000 RGB images, 10 classes)
+**Dataset:** CIFAR-10 (60,000 RGB images, 10 classes) provided by the Canadian Institute for Advanced Research (CIFAR).
 
 ---
 
@@ -33,9 +33,9 @@ After developing the baseline model together, we explored different approaches i
 Each contributor experimented with different CNN architectures, regularization techniques, and training strategies before comparing the results. Based on our evaluation, **Model_cf_9** achieved the best overall performance among the custom CNN models.
 
 ---
+## Best Models
 
-## Best Model (Model_cf_9)
-
+### Custom CNN (Model_cf_9)
 **Architecture**
 - 6 Convolutional layers
 - Batch Normalization
@@ -52,34 +52,69 @@ Each contributor experimented with different CNN architectures, regularization t
 - **Training Accuracy:** 90%
 - **Validation Accuracy:** 83%
 
+### Transfer Learning (VGG16)
+
+A VGG16 Transfer Learning model was also implemented using ImageNet pretrained weights. While **Model_cf_9** achieved the best performance among the custom CNN architectures, the VGG16 model demonstrates the effectiveness of transfer learning and has been deployed with Gradio for real-time image classification.
+
 ---
 
 ## Results
 
-Include:
-- Training & validation curves
-- Confusion matrix
-- Sample predictions
+The figures below summarize the performance of the best-performing custom CNN model, including the training history, confusion matrix, and sample predictions.
 
+### Training Curves
+
+![Training Curves](images/training_curves-2.png)
+
+### Confusion Matrix
+
+![Confusion Matrix](images/confusion_matrix.png)
+
+### Sample Predictions
+
+![Sample Predictions](images/sample_predictions.png)
+
+## Live Demo
+
+The trained models can be tested through the following Gradio applications:
+
+- **Felipe Martignon – VGG16 Transfer Learning**
+  - [Launch Demo](https://ba4828aa997ef2a890.gradio.live)
+
+- **Casilda Gil de Santivanes Finat – Custom CNN (Model_cf_9)**  
+  *Coming soon*
+
+---
+## Tech Stack
+
+- Python
+- TensorFlow / Keras
+- NumPy
+- Matplotlib
+- Scikit-learn
+- Gradio
+- Google Colab
 ---
 
 ## Installation
 
 ```bash
-git clone https://github.com/<your-repository>.git
-cd <repository>
+git clone https://github.com/Casildagsf/Ironhack-DL-Challenge-Group-8.git
+cd Ironhack-DL-Challenge-Group-8
 
 pip install -r requirements.txt
 ```
 
-Run the notebook in Jupyter Notebook or Google Colab.
+Open the notebooks in **Jupyter Notebook** or **Google Colab** to reproduce the experiments.
+
 
 ---
 
 ## Authors
 
 **Casilda Gil de Santivanes Finat**  
-GitHub: https://github.com/Casildagsf/Ironhack-DL-Challenge-Group-8
+GitHub: [Casildagsf](https://github.com/Casildagsf)
 
 **Felipe Martignon**  
-GitHub: https://github.com/Martigol2/Ironhack-DL-Challenge-Group-8
+GitHub: [Martigol2](https://github.com/Martigol2)
+
